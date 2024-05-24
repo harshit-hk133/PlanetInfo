@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.css">
+    <title>Planets</title>
+    <style>
+        .nav-container {
+            background-color: #00008B;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .info {
+            text-align: center;
+            margin-top: 20px;
+            color: #00008B;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+        }
+        .search-container {
+            margin-top: 10px;
+            margin-left: 60px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .search-container input {
+            width: 200px;
+            margin-left: 10px;
+            border: 1px solid #00008B;
+        }
+        .card {
+            margin: 10px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px
+        }
+        .card-body {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body ng-controller="myCtrl">
+    <div class="nav-container">
+        <p>PLANETS</p>
+    </div>
+    <h2 class="info">
+        Explore the planets in our solar system
+    </h2>
+    <div class="btn-container">
+        <div class="btn">
+            <button class="btn btn-outline-primary">MERCURY</button>
+            <button class="btn btn-outline-primary">VENUS</button>
+            <button class="btn btn-outline-primary">EARTH</button>
+            <button class="btn btn-outline-primary">MARS</button>
+            <button class="btn btn-outline-primary">JUPITER</button>
+            <button class="btn btn-outline-primary">SATURN</button>
+            <button class="btn btn-outline-primary">URANUS</button>
+            <button class="btn btn-outline-primary">NEPTUNE</button>
+        </div>
+    </div>
+    <div class="search-container">
+        <input type="text" class="form-control" placeholder="Search planets..." ng-model="searchText">
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 ms-5">
+        <div class="col" ng-repeat="planet in planets | filter: filterPlanets">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ planet.englishName }}</h5>
+                    <p class="card-text">Mass: {{ planet.mass.massValue }} x 10^{{ planet.mass.massExponent }} kg</p>
+                    <p class="card-text">Mean Radius: {{ planet.meanRadius }} km</p>
+                    <p class="card-text">SemimajorAxis : {{ planet.semimajorAxis }} </p>
+                    <p class="card-text">Aphelion: {{ planet.aphelion }} </p>
+                    <p class="card-text">Inclination: {{ planet.inclination }} </p>
+                    <p class="card-text">Density: {{ planet.density }} </p>
+                    <p class="card-text">Gravity: {{ planet.gravity }} </p>
+                    <p class="card-text">Escape: {{ planet.escape }} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+    <script src="Js/angular.min.js"></script>
+    <script src="Js/app.js"></script>
+</body>
+</html>
