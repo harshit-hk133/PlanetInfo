@@ -4,8 +4,8 @@ This AngularJS web app integrates with The Solar System OpenData API to showcase
 
 ## Screenshot
 
-![PlanetInfo](./assets/Picture1.png)
-![PlanetInfo](./assets/Picture2.png)
+![PlanetInfo](PlanetInfo/assets/Picture1.png)
+![PlanetInfo](PlanetInfo/assets/Picture2.png)
 
 ## Features
 
