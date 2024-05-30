@@ -2,6 +2,11 @@
 
 This AngularJS web app integrates with The Solar System OpenData API to showcase information about the planets in our solar system. It includes detailed information about each planet and features a search option to look up individual planet information.
 
+## Screenshot
+
+![PlanetInfo](./assets/Picture1.png)
+![PlanetInfo](./assets/Picture2.png)
+
 ## Features
 
 - Display detailed information about all planets in our solar system.
